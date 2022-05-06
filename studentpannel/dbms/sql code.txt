@@ -1,0 +1,21 @@
+***************Department******************************************* 
+create table department(departmentid int(3) unsigned,branch varchar(3) primary key);
+
+***************************
+ create table hostel(hostelid varchar(4) primary key,hostelname varchar(20),noofstudent int(5));
+
+
+*******************student******************************
+create table student(hostelid varchar(4),usn varchar(10) primary key,name varchar(40),branch varchar(3),sem varchar(2),mobileno int(10),sex varchar(1),foreign key(hostelid) references hostel(hostelid),foreign key(branch) references department(branch));
+
+**************************login*******************************************
+create table login(usn varchar(10),password varchar(256),foreign key(usn) references student(usn));
+
+
+****************RoomNo *********************************************
+create table room(usn varchar(10),roomno varchar(5),seater int(1),foreign key(usn) references student(usn));
+
+
+*************************visitor*************
+create table visitor(usn varchar(10), studentname varchar(40),visitorname varchar(40),relation varchar(50),visitorphoneno int(10),foreign key(usn) references student(usn));
+

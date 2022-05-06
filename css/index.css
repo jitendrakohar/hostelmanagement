@@ -1,0 +1,21 @@
+body {
+  background-color: white;
+}
+.container {
+  display: inline-flex;
+  width: 100%;
+  height: 100vh;
+}
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: turquoise;
+  border: 3px solid black;
+  background-color: rgb(228, 224, 225, 0.7);
+}
+.actualcontent {
+  width: 79%;
+  height: 100%;
+  border: 3px solid black;
+  background-color: rgb(228, 224, 225);
+}

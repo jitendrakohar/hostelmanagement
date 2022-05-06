@@ -1,0 +1,33 @@
+.styledtable {
+  font-size: 20px;
+  border-collapse: collapse;
+  margin: 100px 90px;
+
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.styledtable thead tr {
+  font-size: 25px;
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styledtable th,
+.styledtable td {
+  padding: 22px 18px;
+}
+
+.styledtable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styledtable tbody tr:nth-child(even) {
+  background-color: #d6eeee;
+}
+.styledtable td img {
+  width: 20px;
+  height: 20px;
+}

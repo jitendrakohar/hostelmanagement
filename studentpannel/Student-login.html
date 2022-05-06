@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/Student-loginstyle.css">
+
+<body>
+    <div class="bannerimage"></div>
+
+
+    <!-- *************************************************This is the login form for the student*********************************************** -->
+
+
+    <div class="login-form" style="color: blue;">
+        <h1>LOG IN AS STUDENT</h1>
+        <form class="loginform"  method="post" action="login.php">
+            <!--  -->
+            <label for="username">
+                <P style="font-size:2rem;font-weight: bold;">Username:</P>
+            </label>
+            <input type="text" width="20px" class="inputform" id="username" placeholder="Username" name="lusername"
+                required="required" />
+            <br>
+            <label for="password">
+                <P style="font-size:2rem;font-weight: bold;">Password:</P>
+            </label>
+            <input type="password" class="inputform" id="Password" name="lpassword" Placeholder="password" required />
+            <br>
+            <button type="submit" class="button"><a >Login</a></button><br><br>
+            <a class="logina" href="../Admin-logins.php ">Login As Admin</a><br>
+
+            <h6 style="font-size: large;">Haven't sign in yet ?</h6>
+
+
+            <a onclick="document.getElementById('id01').style.display='block'"
+                style="font-size: 20px;text-decoration: none;color: blue;padding-bottom: 25px;cursor: pointer;"> Sign Up
+                Now as a student</a>
+
+        </form>
+    </div>
+
+
+    <!-- ********************************Modal of the website which opens the signup form*********************************************************** -->
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form class="modal-content" method="post" action="insert.php">
+            <div class="container">
+                <!-- <div class="formcontainer"
+                    style="width: 40rem; height:auto;background-color: rgb(228,224,225);text-align:left;overflow: hidden;"> -->
+                <h4>PLEASE FILL OUT THIS FORM CORRECTLY</h4>
+                <!-- <form method="post" action="login.php"> -->
+                    <div class="smalldiv">
+
+                        <div class="dataentry">
+                            <label for="inputFirstName">FIRST NAME</label><br>
+                            <input type="text" class="inputbox" name="fname" id="inputFirstName" required pattern="[a-zA-Z]{1,32}">
+                        </div>
+                        <div class="dataentry">
+                            <label for="inputLastName">LAST NAME</label><br>
+                            <input type="text" class="inputbox" name="lname" id="inputLastName" pattern="[a-zA-Z]{1,32}">
+                        </div>
+                    </div>
+                    <div class="smalldiv">
+
+                        <div class="dataentry">
+                            <label for="inputDOB">DOB</label><br>
+                            <input type="text" class="inputbox" name="dob" id="inputDOB" pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" required>
+                        </div>
+                        <div class="dataentry">
+                            <label for="inputMob">MOBILE NO</label><br>
+                            <input type="phone" class="inputbox" name="mobileno" id="inputMob" pattern="[0-9]{10}" maxlength="10" minlength="10" >
+                        </div>
+                    </div>
+                    <div class="smalldiv">
+
+                        <div class="dataentry">
+                            <label for="inputUSN">USN</label><br>
+                            <input type="text" class="inputbox" name="usn" id="inputUSN" pattern="1bh[0-9]{2}[a-z]{2}[0-9]{3}" placeholder="1bh19cs034">
+                        </div>
+                        <div class="dataentry">
+                            <label for="inputSem">SEMESTER</label><br>
+                            <input type="number" class="inputbox" name="semester" id="inputSem" pattern="[1-8]{1,1}" required>
+                        </div>
+                    </div>
+                    <!-- for gmail and address -->
+                    <div class="smalldiv">
+
+                        <div class="dataentry">
+                            <label for="inputAddress">ADDRESS</label><br>
+                            <input type="text" class="inputbox" name="address" id="inputAddress">
+                        </div>
+                        <div class="dataentry">
+                            <label for="inputMail">MAIL</label><br>
+                            <input type="email" class="inputbox" name="mail" id="inputMail" required>
+                        </div>
+                    </div>
+
+
+                    <!--                 
+                        <div class="dataentry" style="width: auto;">
+                            <label for="inputAddress">ADDRESS</label><br>
+                            <input type="text" class="inputbox" name="Address" style="width:75%" id="inputAddress">
+                        </div> -->
+
+                    <br>
+                    <div>
+                        <div class="smalldiv">
+
+                            <div class="dataentry">
+                                <label for="department">Department</label><br>
+                                <input type="text" class="inputbox" name="department" id="department" required>
+                            </div>
+                            <div class="dataentry">
+                                <label for="inputSem">SEX</label><br>
+                                <input type="text" class="inputbox" name="sex" id="inputSem" required>
+                            </div>
+                        </div>
+                        <div class="smalldiv">
+
+                            <div class="dataentry">
+                                <label for="inputRoomNo">ROOMNO</label><br>
+                                <input type="text" class="inputbox" name="roomno" id="inputRoomNo" required>
+                            </div>
+                            <div class="dataentry">
+                                <label for="inputSeaters">NO OF SEATERS</label><br>
+                                <input type="text" class="inputbox" name="noofseater" id="inputSem" required>
+                            </div>
+                        </div>
+                        <div class="smalldiv">
+
+                            <div class="dataentry">
+                                <label for="inputPassword">PASSWORD</label><br>
+                                <input type="password" class="inputbox pass" name="password" id="inputPassword" required>
+                            </div>
+                            <div class="dataentry">
+                                <label for="inputRePassword">RENTER YOUR PASSWORD</label><br>
+                                <input type="password" class="inputbox pass" name="renterpass" id="inputSem" required>
+                            </div>
+                        </div>
+                        <div class="smalldiv">
+                        
+                            <div class="dataentry text22">
+                                <label for="hostelid">hostelid</label><br>
+                            <select class="inputbox pass" style="width: 120px;height: 30px;padding:4px;" name="hostelid">
+                                <option value="B100">B100</option>
+                                <option value="G101">G101</option>
+                                <option value="O102">O102</option>
+                            </select>
+                            </div>
+                            <div class="dataentry text22">
+                                <label for="hostelopt ">HOSTEL</label><br>
+                                <select class="inputbox pass" style="width: 120px;height: 30px;padding: 4px;" name="hostelopt">
+                                    <option value="Engineering Boys Hostel">Boys hostel</option>
+                                    <option value="Engineering girls Hostel">girls hostel</option>
+                                    <option value="Engineering girls Hostel">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="smalldiv">
+                            <input class="inputCheck" type="Checkbox" name="True" id="gridcheckbox" required>
+                            <label for="gridcheckbox">By clicking on the checkbox,I accept all the terms and
+                                condition</label>
+
+                        </div>
+                        <div class="submit" style="height: 34px;margin-top: 30px;">
+                            <button type="submit" class="submitButton">Submit The form </button>
+                        </div>
+               
+
+
+            </div>
+    </div>
+    </form>
+    <br>
+    </div>
+
+</body>
+
+</html>
